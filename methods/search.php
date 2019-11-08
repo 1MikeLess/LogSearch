@@ -128,6 +128,8 @@ if (isset($action)) {
     case 'getLogContent':
       echo json_encode(_getLogContent($_logfiles_dir, json_decode($_POST["logfiles"]), $_POST["query_string"]));
       break;
-
+    default:
+      echo "</p>Empty request</p>";
+      break;
   }
 }

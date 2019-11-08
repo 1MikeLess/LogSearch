@@ -1,5 +1,5 @@
 {
 
   "platform": "Apache",
-  "directory": "D:/programfiles/ospanel/userdata/logs/"
+  "directory": "../../../userdata/logs/"
 }
