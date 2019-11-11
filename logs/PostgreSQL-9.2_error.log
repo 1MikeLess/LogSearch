@@ -1,0 +1,8 @@
+LOG:  database system was interrupted; last known up at 2019-11-11 14:48:36 GMT
+FATAL:  the database system is starting up
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/174D488
+LOG:  redo is not required
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "ogonyok" does not exist

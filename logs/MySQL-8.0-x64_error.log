@@ -1,0 +1,5 @@
+2019-11-11T15:57:25.419555Z 0 [System] [MY-010116] [Server] d:\programfiles\ospanel\modules\database\MySQL-8.0-x64\bin\mysqld.exe (mysqld 8.0.15) starting as process 7240
+2019-11-11T15:57:25.421709Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2019-11-11T15:57:25.421727Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2019-11-11T15:57:31.456506Z 0 [System] [MY-010931] [Server] d:\programfiles\ospanel\modules\database\MySQL-8.0-x64\bin\mysqld.exe: ready for connections. Version: '8.0.15'  socket: ''  port: 3306  MySQL Community Server - GPL.
+2019-11-11T15:57:31.679384Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060

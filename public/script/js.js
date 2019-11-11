@@ -1,16 +1,17 @@
 
 (function($){
+    $("#loglist").html("<h6 class='text-muted'>Пусто</h6>")
 
-  function _loadLogsContent(checked_logs) {
-    $("#loglist").html("")
+    function _loadLogsContent(checked_logs) {
+        $("#loglist").html("")
 
-    $.post(
-      "../methods/search.php",
-      {
-        action: "getLogContent",
-        logfiles: JSON.stringify(checked_logs),
-        query_string: $("#query_string").val().trim()
-      },
+        $.post(
+            "/getLogContent",
+            {
+                action: "getLogContent",
+                logfiles: JSON.stringify(checked_logs),
+                query_string: $("#query_string").val().trim()
+            },
 
       content_resp => {
         JSON.parse(content_resp)
@@ -58,7 +59,7 @@
   }
 
   $.post(
-    "../methods/search.php", {
+    "getLogfilesList", {
       action: 'getLogfilesList'
     },
     loglist_resp => {
@@ -87,7 +88,6 @@
     })
 
     _loadLogsContent(checked_logs)
-    // console.log(checked_logs);
   })
 
 })(jQuery)
