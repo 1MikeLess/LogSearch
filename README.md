@@ -5,3 +5,5 @@
 Например: "D:/programfiles/ospanel/userdata/logs/" или же "../../../userdata/logs/".
 
 Логика, написанная на PHP, находится в "/methods", где находится файл search.php.
+
+### 09.11.19 Сб - Переработка стиля на PSR
