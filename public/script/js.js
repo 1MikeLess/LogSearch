@@ -1,6 +1,7 @@
 
 (function($){
     $("#loglist").html("<h6 class='text-muted'>Пусто</h6>")
+    $('#keyword_marks_allowed_cb').prop('checked', true);
 
     function _loadLogsContent(checked_logs) {
         $("#loglist").html("")
@@ -10,7 +11,8 @@
             {
                 action: "getLogContent",
                 logfiles: JSON.stringify(checked_logs),
-                query_string: $("#query_string").val().trim()
+                query_string: $("#query_string").val().trim(),
+                allow_marks: $('#keyword_marks_allowed_cb').is(':checked'),
             },
 
       content_resp => {

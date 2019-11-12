@@ -28,6 +28,10 @@
               <span>Фильтр</span>
               <!-- <div class="icon filter-icon"></div> -->
             </button>
+            <label>
+                <span>Включить выделение слов: </span>
+                <input id="keyword_marks_allowed_cb" type="checkbox">
+            </label>
           </div>
         </form>
       </header>
