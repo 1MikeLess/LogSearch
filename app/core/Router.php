@@ -41,14 +41,8 @@ class Router
                 if (method_exists($path, $action)) {
                     $controller = new $path($this->params);
                     $controller->$action();
-                } else {
-                    View::errorCode(404);
-                }
-            } else {
-                View::errorCode(404);
-            }
-        } else {
-            View::errorCode(404);
-        }
+                } else View::errorCode(405);
+            } else View::errorCode(404);
+        } else View::errorCode(500);
     }
 }

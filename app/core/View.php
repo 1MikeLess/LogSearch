@@ -22,7 +22,7 @@ class View
             $content = ob_get_clean();
             require 'app/views/layouts/'.$this->layout.'.php';
         } else {
-            echo 'View not found! '.$this->path;
+            echo '<b>View not found!</b> '.$this->path;
         }
     }
 
@@ -33,13 +33,15 @@ class View
 
     public static function errorCode($code) {
         http_response_code($code);
-        // require 'app/views/errors/ErrorContent.php';
-        $errorPath = 'app/views/errors/'.$code.'.php';
-        if (file_exists($errorPath)) {
-            require $errorPath;
+        $error_path = 'app/views/errors/'.$code.'.php';
+        ob_start();
+        if (file_exists($error_path)) {
+            require $error_path;
         } else {
             echo '<b>Ошибка!</b>';
         }
+        $error_content = ob_get_clean();
+        require 'app/views/errors/ErrorLayout.php';
         exit;
     }
 
